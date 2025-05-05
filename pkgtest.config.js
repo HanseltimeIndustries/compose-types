@@ -35,8 +35,8 @@ const baseEntry = {
 	},
 	// Uncomment if you need binTests
 	// binTests: {},
-	// Uncomment if you nneed to run scripts for specific circumstances
-	// scriptTests: [],
+	// Uncomment if you need to run scripts for specific circumstances
+	scriptTests: [],
 	moduleTypes: ["commonjs", "esm"],
 	timeout: 5000, // ts-node on yarn-berry takes about 2s (kinda pretty high compared to all the others)
 };

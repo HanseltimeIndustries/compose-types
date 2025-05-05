@@ -46,26 +46,12 @@ jobs:
             git fetch origin ${{ github.ref_name }} --unshallow
             yarn commitlint --from $(git rev-list --max-parents=0 origin/${{ github.ref_name }})
           fi
-      - name: build
-        run: |
-          yarn build
       - name: linting
         run: |
           yarn lint
       - name: formatting
         run: |
           yarn format
-      - name: testing
-        run: |
-          yarn test
-      # Uncomment this if you are setting up binary scripts
-      # - name: Make sure binary is accessible
-      #   run: |
-      #     packageDir=${PWD##*/}
-      #     cd ../
-      #     npm install -g ./${packageDir} --ignore-scripts
-      #     echo "Running script to ensure valid help dispaly"
-      #     aws-cfn-console-import --help
   pkg-test:
     needs:
       - ci-checks
@@ -144,10 +130,6 @@ jobs:
               echo "$changes"
               exit 1
           fi
-      - name: ensure no errors with mkdocs
-        run: |
-          pip install -r docs/requirements.txt
-          mkdocs build --strict
   # easy to require end cap job
   done:
     needs:

@@ -1,5 +1,9 @@
-**@hanseltime/your-package-here**
+**@hanseltime/compose-types**
 
 ***
 
-# @hanseltime/your-package-here
+# @hanseltime/compose-types
+
+## Namespaces
+
+- [v3](@hanseltime/namespaces/v3/README.md)
