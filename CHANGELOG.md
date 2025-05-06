@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/HanseltimeIndustries/compose-types/compare/v1.0.0...v1.1.0) (2025-05-06)
+
+
+### Features
+
+* types are closed with x-prefix keys needing to be specified ([d63e7ff](https://github.com/HanseltimeIndustries/compose-types/commit/d63e7ffedf5957a3501be76d2c03bf7338bf2911))
+
 # 1.0.0 (2025-05-05)
 
 

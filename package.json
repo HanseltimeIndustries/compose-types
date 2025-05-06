@@ -40,7 +40,7 @@
 		"release": "yarn semantic-release",
 		"ts-run": "./bin/ts-run.sh"
 	},
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"publishConfig": {
 		"access": "public"
 	},
