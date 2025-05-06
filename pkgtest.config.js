@@ -59,7 +59,7 @@ const plugNPlayEntry = {
 
 module.exports = {
 	rootDir: "pkgtest",
-	locks: true,
+	locks: false,
 	matchIgnore: ["fixtures/**"],
 	entries: [plugNPlayEntry, nonPlugNPlayEntry],
 };

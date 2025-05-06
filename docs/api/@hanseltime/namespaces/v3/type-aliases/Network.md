@@ -4,9 +4,9 @@
 
 [@hanseltime/compose-types](../../../../README.md) / [v3](../README.md) / Network
 
-# Type Alias: Network
+# Type Alias: Network\<CustomKeys\>
 
-> **Network** = `object` & [`Network1`](Network1.md)
+> **Network**\<`CustomKeys`\> = `object` & [`XPrefixedKeys`](XPrefixedKeys.md)\<`CustomKeys`\> & [`Network1`](Network1.md)\<`CustomKeys`\>
 
 This interface was referenced by `undefined`'s JSON-Schema definition
 via the `patternProperty` "^[a-zA-Z0-9._-]+$".
@@ -41,19 +41,7 @@ The driver used for this network
 
 ### external?
 
-> `optional` **external**: `boolean` \| `string` \| \{ `[k: string]`: `unknown`;  `name`: `string`; \}
-
-#### Type declaration
-
-`boolean`
-
-`string`
-
-\{ `[k: string]`: `unknown`;  `name`: `string`; \}
-
-#### Index Signature
-
-\[`k`: `string`\]: `unknown`
+> `optional` **external**: `boolean` \| `string` \| `object` & [`XPrefixedKeys`](XPrefixedKeys.md)\<`CustomKeys`\>
 
 ### internal?
 
@@ -61,29 +49,23 @@ The driver used for this network
 
 ### ipam?
 
-> `optional` **ipam**: `object`
+> `optional` **ipam**: `object` & [`XPrefixedKeys`](XPrefixedKeys.md)\<`CustomKeys`\>
 
-#### Index Signature
+#### Type declaration
 
-\[`k`: `string`\]: `unknown`
+##### config?
 
-#### ipam.config?
+> `optional` **config**: `object` & [`XPrefixedKeys`](XPrefixedKeys.md)\<`CustomKeys`\>[]
 
-> `optional` **config**: `object`[]
-
-##### Index Signature
-
-\[`k`: `string`\]: `unknown`
-
-#### ipam.driver?
+##### driver?
 
 > `optional` **driver**: `string`
 
-#### ipam.options?
+##### options?
 
 > `optional` **options**: `object`
 
-##### Index Signature
+###### Index Signature
 
 \[`k`: `string`\]: `string`
 
@@ -94,3 +76,9 @@ The driver used for this network
 ### name?
 
 > `optional` **name**: `string`
+
+## Type Parameters
+
+### CustomKeys
+
+`CustomKeys` *extends* `string` = `never`

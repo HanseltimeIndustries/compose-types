@@ -5,12 +5,12 @@
 		"type": "git",
 		"url": "https://github.com/HanseltimeIndustries/compose-types.git"
 	},
-	"main": "src/index.d.ts",
-	"types": "src/index.d.ts",
+	"main": "dist/index.d.ts",
+	"types": "dist/index.d.ts",
 	"exports": {
-		"types": "./src/index.d.ts"
+		"types": "./dist/index.d.ts"
 	},
-	"files": ["src"],
+	"files": ["dist"],
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
 		"@commitlint/config-angular": "^18.4.3",

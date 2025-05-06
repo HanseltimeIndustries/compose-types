@@ -4,54 +4,12 @@
 
 [@hanseltime/compose-types](../../../../README.md) / [v3](../README.md) / Volume1
 
-# Type Alias: Volume1
+# Type Alias: Volume1\<CustomKeys\>
 
-> **Volume1** = \{ `[k: string]`: `unknown`;  `driver`: `string`; `driver_opts`: \{\}; `external`: `boolean` \| `string` \| \{ `[k: string]`: `unknown`;  `name`: `string`; \}; `labels`: [`ListOrDict`](ListOrDict.md); `name`: `string`; \} \| `null`
+> **Volume1**\<`CustomKeys`\> = `object` & [`XPrefixedKeys`](XPrefixedKeys.md)\<`CustomKeys`\> \| `null`
 
-## Type declaration
+## Type Parameters
 
-\{ `[k: string]`: `unknown`;  `driver`: `string`; `driver_opts`: \{\}; `external`: `boolean` \| `string` \| \{ `[k: string]`: `unknown`;  `name`: `string`; \}; `labels`: [`ListOrDict`](ListOrDict.md); `name`: `string`; \}
+### CustomKeys
 
-## Index Signature
-
-\[`k`: `string`\]: `unknown`
-
-### driver?
-
-> `optional` **driver**: `string`
-
-The driver used for this volume
-
-### driver\_opts?
-
-> `optional` **driver\_opts**: `object`
-
-#### Index Signature
-
-\[`k`: `string`\]: `string` \| `number`
-
-### external?
-
-> `optional` **external**: `boolean` \| `string` \| \{ `[k: string]`: `unknown`;  `name`: `string`; \}
-
-#### Type declaration
-
-`boolean`
-
-`string`
-
-\{ `[k: string]`: `unknown`;  `name`: `string`; \}
-
-#### Index Signature
-
-\[`k`: `string`\]: `unknown`
-
-### labels?
-
-> `optional` **labels**: [`ListOrDict`](ListOrDict.md)
-
-### name?
-
-> `optional` **name**: `string`
-
-`null`
+`CustomKeys` *extends* `string` = `never`

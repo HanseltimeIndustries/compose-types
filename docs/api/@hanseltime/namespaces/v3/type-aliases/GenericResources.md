@@ -4,28 +4,12 @@
 
 [@hanseltime/compose-types](../../../../README.md) / [v3](../README.md) / GenericResources
 
-# Type Alias: GenericResources
+# Type Alias: GenericResources\<CustomKeys\>
 
-> **GenericResources** = `object`[]
+> **GenericResources**\<`CustomKeys`\> = `object` & [`XPrefixedKeys`](XPrefixedKeys.md)\<`CustomKeys`\>[]
 
-## Type declaration
+## Type Parameters
 
-## Index Signature
+### CustomKeys
 
-\[`k`: `string`\]: `unknown`
-
-### discrete\_resource\_spec?
-
-> `optional` **discrete\_resource\_spec**: `object`
-
-#### Index Signature
-
-\[`k`: `string`\]: `unknown`
-
-#### discrete\_resource\_spec.kind?
-
-> `optional` **kind**: `string`
-
-#### discrete\_resource\_spec.value?
-
-> `optional` **value**: `number` \| `string`
+`CustomKeys` *extends* `string` = `never`

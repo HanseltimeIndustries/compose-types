@@ -4,8 +4,14 @@
 
 [@hanseltime/compose-types](../../../../README.md) / [v3](../README.md) / Ulimits
 
-# Interface: Ulimits
+# Interface: Ulimits\<CustomKeys\>
+
+## Type Parameters
+
+### CustomKeys
+
+`CustomKeys` *extends* `string` = `never`
 
 ## Indexable
 
-\[`k`: `string`\]: `string` \| `number` \| \{ `[k: string]`: `unknown`;  `hard`: `string` \| `number`; `soft`: `string` \| `number`; \}
+\[`k`: `string`\]: `string` \| `number` \| `object` & [`XPrefixedKeys`](../type-aliases/XPrefixedKeys.md)\<`CustomKeys`\>

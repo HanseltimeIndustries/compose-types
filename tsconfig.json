@@ -15,9 +15,10 @@
 		"skipLibCheck": true,
 		"declaration": true,
 		"declarationMap": true,
-		"emitDeclarationOnly": false,
+		"emitDeclarationOnly": true,
 		"isolatedModules": true,
-		"types": ["node"]
+		"types": ["node"],
+		"outDir": "dist"
 	},
 	"exclude": ["jest.config.ts", "dist", "node_modules", "bin", "pkgtest"]
 }

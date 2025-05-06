@@ -4,38 +4,32 @@
 
 [@hanseltime/compose-types](../../../../README.md) / [v3](../README.md) / Config
 
-# Interface: Config
+# Type Alias: Config\<CustomKeys\>
+
+> **Config**\<`CustomKeys`\> = [`XPrefixedKeys`](XPrefixedKeys.md)\<`CustomKeys`\> & `object`
 
 This interface was referenced by `undefined`'s JSON-Schema definition
 via the `patternProperty` "^[a-zA-Z0-9._-]+$".
 
-## Indexable
-
-\[`k`: `string`\]: `unknown`
-
-## Properties
+## Type declaration
 
 ### content?
 
 > `optional` **content**: `string`
 
-***
-
 ### environment?
 
 > `optional` **environment**: `string`
 
-***
-
 ### external?
 
-> `optional` **external**: `string` \| `boolean` \| \{ `[k: string]`: `unknown`;  `name`: `string`; \}
+> `optional` **external**: `boolean` \| `string` \| \{ `[k: string]`: `unknown`;  `name`: `string`; \}
 
 #### Type declaration
 
-`string`
-
 `boolean`
+
+`string`
 
 \{ `[k: string]`: `unknown`;  `name`: `string`; \}
 
@@ -43,32 +37,24 @@ via the `patternProperty` "^[a-zA-Z0-9._-]+$".
 
 \[`k`: `string`\]: `unknown`
 
-#### ~~name?~~
-
-> `optional` **name**: `string`
-
-##### Deprecated
-
-***
-
 ### file?
 
 > `optional` **file**: `string`
 
-***
-
 ### labels?
 
-> `optional` **labels**: [`ListOrDict`](../type-aliases/ListOrDict.md)
-
-***
+> `optional` **labels**: [`ListOrDict`](ListOrDict.md)
 
 ### name?
 
 > `optional` **name**: `string`
 
-***
-
 ### template\_driver?
 
 > `optional` **template\_driver**: `string`
+
+## Type Parameters
+
+### CustomKeys
+
+`CustomKeys` *extends* `string` = `never`

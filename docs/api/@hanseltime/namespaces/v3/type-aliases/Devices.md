@@ -4,32 +4,12 @@
 
 [@hanseltime/compose-types](../../../../README.md) / [v3](../README.md) / Devices
 
-# Type Alias: Devices
+# Type Alias: Devices\<CustomKeys\>
 
-> **Devices** = `object`[]
+> **Devices**\<`CustomKeys`\> = `object` & [`XPrefixedKeys`](XPrefixedKeys.md)\<`CustomKeys`\>[]
 
-## Type declaration
+## Type Parameters
 
-## Index Signature
+### CustomKeys
 
-\[`k`: `string`\]: `unknown`
-
-### capabilities
-
-> **capabilities**: [`ListOfStrings`](ListOfStrings.md)
-
-### count?
-
-> `optional` **count**: `string` \| `number`
-
-### device\_ids?
-
-> `optional` **device\_ids**: [`ListOfStrings`](ListOfStrings.md)
-
-### driver?
-
-> `optional` **driver**: `string`
-
-### options?
-
-> `optional` **options**: [`ListOrDict`](ListOrDict.md)
+`CustomKeys` *extends* `string` = `never`
