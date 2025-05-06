@@ -4,9 +4,9 @@
 
 [@hanseltime/compose-types](../../../../README.md) / [v3](../README.md) / Deployment
 
-# Type Alias: Deployment
+# Type Alias: Deployment\<CustomKeys\>
 
-> **Deployment** = `object` & [`Deployment1`](Deployment1.md)
+> **Deployment**\<`CustomKeys`\> = `object` & [`Deployment1`](Deployment1.md)\<`CustomKeys`\> & [`XPrefixedKeys`](XPrefixedKeys.md)\<`CustomKeys`\>
 
 ## Type declaration
 
@@ -24,27 +24,21 @@
 
 ### placement?
 
-> `optional` **placement**: `object`
+> `optional` **placement**: `object` & [`XPrefixedKeys`](XPrefixedKeys.md)\<`CustomKeys`\>
 
-#### Index Signature
+#### Type declaration
 
-\[`k`: `string`\]: `unknown`
-
-#### placement.constraints?
+##### constraints?
 
 > `optional` **constraints**: `string`[]
 
-#### placement.max\_replicas\_per\_node?
+##### max\_replicas\_per\_node?
 
 > `optional` **max\_replicas\_per\_node**: `number` \| `string`
 
-#### placement.preferences?
+##### preferences?
 
-> `optional` **preferences**: `object`[]
-
-##### Index Signature
-
-\[`k`: `string`\]: `unknown`
+> `optional` **preferences**: `object` & [`XPrefixedKeys`](XPrefixedKeys.md)\<`CustomKeys`\>[]
 
 ### replicas?
 
@@ -52,140 +46,134 @@
 
 ### resources?
 
-> `optional` **resources**: `object`
+> `optional` **resources**: `object` & [`XPrefixedKeys`](XPrefixedKeys.md)\<`CustomKeys`\>
 
-#### Index Signature
+#### Type declaration
 
-\[`k`: `string`\]: `unknown`
+##### limits?
 
-#### resources.limits?
+> `optional` **limits**: `object` & [`XPrefixedKeys`](XPrefixedKeys.md)\<`CustomKeys`\>
 
-> `optional` **limits**: `object`
+###### Type declaration
 
-##### Index Signature
-
-\[`k`: `string`\]: `unknown`
-
-#### resources.limits.cpus?
+###### cpus?
 
 > `optional` **cpus**: `number` \| `string`
 
-#### resources.limits.memory?
+###### memory?
 
 > `optional` **memory**: `string`
 
-#### resources.limits.pids?
+###### pids?
 
 > `optional` **pids**: `number` \| `string`
 
-#### resources.reservations?
+##### reservations?
 
-> `optional` **reservations**: `object`
+> `optional` **reservations**: `object` & [`XPrefixedKeys`](XPrefixedKeys.md)\<`CustomKeys`\>
 
-##### Index Signature
+###### Type declaration
 
-\[`k`: `string`\]: `unknown`
-
-#### resources.reservations.cpus?
+###### cpus?
 
 > `optional` **cpus**: `number` \| `string`
 
-#### resources.reservations.devices?
+###### devices?
 
-> `optional` **devices**: [`Devices`](Devices.md)
+> `optional` **devices**: [`Devices`](Devices.md)\<`CustomKeys`\>
 
-#### resources.reservations.generic\_resources?
+###### generic\_resources?
 
-> `optional` **generic\_resources**: [`GenericResources`](GenericResources.md)
+> `optional` **generic\_resources**: [`GenericResources`](GenericResources.md)\<`CustomKeys`\>
 
-#### resources.reservations.memory?
+###### memory?
 
 > `optional` **memory**: `string`
 
 ### restart\_policy?
 
-> `optional` **restart\_policy**: `object`
+> `optional` **restart\_policy**: `object` & [`XPrefixedKeys`](XPrefixedKeys.md)\<`CustomKeys`\>
 
-#### Index Signature
+#### Type declaration
 
-\[`k`: `string`\]: `unknown`
-
-#### restart\_policy.condition?
+##### condition?
 
 > `optional` **condition**: `string`
 
-#### restart\_policy.delay?
+##### delay?
 
 > `optional` **delay**: `string`
 
-#### restart\_policy.max\_attempts?
+##### max\_attempts?
 
 > `optional` **max\_attempts**: `number` \| `string`
 
-#### restart\_policy.window?
+##### window?
 
 > `optional` **window**: `string`
 
 ### rollback\_config?
 
-> `optional` **rollback\_config**: `object`
+> `optional` **rollback\_config**: `object` & [`XPrefixedKeys`](XPrefixedKeys.md)\<`CustomKeys`\>
 
-#### Index Signature
+#### Type declaration
 
-\[`k`: `string`\]: `unknown`
-
-#### rollback\_config.delay?
+##### delay?
 
 > `optional` **delay**: `string`
 
-#### rollback\_config.failure\_action?
+##### failure\_action?
 
 > `optional` **failure\_action**: `string`
 
-#### rollback\_config.max\_failure\_ratio?
+##### max\_failure\_ratio?
 
 > `optional` **max\_failure\_ratio**: `number` \| `string`
 
-#### rollback\_config.monitor?
+##### monitor?
 
 > `optional` **monitor**: `string`
 
-#### rollback\_config.order?
+##### order?
 
 > `optional` **order**: `"start-first"` \| `"stop-first"`
 
-#### rollback\_config.parallelism?
+##### parallelism?
 
 > `optional` **parallelism**: `number` \| `string`
 
 ### update\_config?
 
-> `optional` **update\_config**: `object`
+> `optional` **update\_config**: `object` & [`XPrefixedKeys`](XPrefixedKeys.md)\<`CustomKeys`\>
 
-#### Index Signature
+#### Type declaration
 
-\[`k`: `string`\]: `unknown`
-
-#### update\_config.delay?
+##### delay?
 
 > `optional` **delay**: `string`
 
-#### update\_config.failure\_action?
+##### failure\_action?
 
 > `optional` **failure\_action**: `string`
 
-#### update\_config.max\_failure\_ratio?
+##### max\_failure\_ratio?
 
 > `optional` **max\_failure\_ratio**: `number` \| `string`
 
-#### update\_config.monitor?
+##### monitor?
 
 > `optional` **monitor**: `string`
 
-#### update\_config.order?
+##### order?
 
 > `optional` **order**: `"start-first"` \| `"stop-first"`
 
-#### update\_config.parallelism?
+##### parallelism?
 
 > `optional` **parallelism**: `number` \| `string`
+
+## Type Parameters
+
+### CustomKeys
+
+`CustomKeys` *extends* `string` = `never`

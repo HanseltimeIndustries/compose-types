@@ -4,24 +4,12 @@
 
 [@hanseltime/compose-types](../../../../README.md) / [v3](../README.md) / Development1
 
-# Type Alias: Development1
+# Type Alias: Development1\<CustomKeys\>
 
-> **Development1** = \{ `[k: string]`: `unknown`;  `watch`: `object`[]; \} \| `null`
+> **Development1**\<`CustomKeys`\> = `object` & [`XPrefixedKeys`](XPrefixedKeys.md)\<`CustomKeys`\> \| `null`
 
-## Type declaration
+## Type Parameters
 
-\{ `[k: string]`: `unknown`;  `watch`: `object`[]; \}
+### CustomKeys
 
-## Index Signature
-
-\[`k`: `string`\]: `unknown`
-
-### watch?
-
-> `optional` **watch**: `object`[]
-
-#### Index Signature
-
-\[`k`: `string`\]: `unknown`
-
-`null`
+`CustomKeys` *extends* `string` = `never`

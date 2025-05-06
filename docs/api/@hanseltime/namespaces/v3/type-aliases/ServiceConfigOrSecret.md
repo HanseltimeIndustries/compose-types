@@ -4,6 +4,12 @@
 
 [@hanseltime/compose-types](../../../../README.md) / [v3](../README.md) / ServiceConfigOrSecret
 
-# Type Alias: ServiceConfigOrSecret
+# Type Alias: ServiceConfigOrSecret\<CustomKeys\>
 
-> **ServiceConfigOrSecret** = (`string` \| \{ `[k: string]`: `unknown`;  `gid`: `string`; `mode`: `number` \| `string`; `source`: `string`; `target`: `string`; `uid`: `string`; \})[]
+> **ServiceConfigOrSecret**\<`CustomKeys`\> = (`string` \| `object` & [`XPrefixedKeys`](XPrefixedKeys.md)\<`CustomKeys`\>)[]
+
+## Type Parameters
+
+### CustomKeys
+
+`CustomKeys` *extends* `string` = `never`

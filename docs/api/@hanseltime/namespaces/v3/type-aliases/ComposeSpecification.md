@@ -4,15 +4,13 @@
 
 [@hanseltime/compose-types](../../../../README.md) / [v3](../README.md) / ComposeSpecification
 
-# Interface: ComposeSpecification
+# Type Alias: ComposeSpecification\<CustomKeys\>
+
+> **ComposeSpecification**\<`CustomKeys`\> = [`XPrefixedKeys`](XPrefixedKeys.md)\<`CustomKeys`\> & `object`
 
 The Compose file is a YAML file defining a multi-containers based application.
 
-## Indexable
-
-\[`k`: `string`\]: `unknown`
-
-## Properties
+## Type declaration
 
 ### configs?
 
@@ -22,25 +20,19 @@ Configurations for services in the project
 
 #### Index Signature
 
-\[`k`: `string`\]: [`Config`](Config.md)
-
-***
+\[`k`: `string`\]: [`Config`](Config.md)\<`CustomKeys`\>
 
 ### include?
 
-> `optional` **include**: [`Include`](../type-aliases/Include.md)[]
+> `optional` **include**: [`Include`](Include.md)[]
 
 compose sub-projects to be included.
-
-***
 
 ### name?
 
 > `optional` **name**: `string`
 
 define the Compose project name, until user defines one explicitly.
-
-***
 
 ### networks?
 
@@ -50,9 +42,7 @@ Networks that are shared among multiple services
 
 #### Index Signature
 
-\[`k`: `string`\]: `object` & `object`
-
-***
+\[`k`: `string`\]: `object` & [`XPrefixedKeys`](XPrefixedKeys.md)\<`CustomKeys`\> & `object`
 
 ### secrets?
 
@@ -62,9 +52,7 @@ Secrets that are shared among multiple services
 
 #### Index Signature
 
-\[`k`: `string`\]: [`Secret`](Secret.md)
-
-***
+\[`k`: `string`\]: [`Secret`](Secret.md)\<`CustomKeys`\>
 
 ### services?
 
@@ -74,17 +62,13 @@ The services in your project
 
 #### Index Signature
 
-\[`k`: `string`\]: [`Service`](Service.md)
-
-***
+\[`k`: `string`\]: [`Service`](Service.md)\<`CustomKeys`\>
 
 ### version?
 
 > `optional` **version**: `string`
 
 declared for backward compatibility, ignored.
-
-***
 
 ### volumes?
 
@@ -94,4 +78,10 @@ Named volumes that are shared among multiple services
 
 #### Index Signature
 
-\[`k`: `string`\]: `object` & `object`
+\[`k`: `string`\]: `object` & [`XPrefixedKeys`](XPrefixedKeys.md)\<`CustomKeys`\> & `object`
+
+## Type Parameters
+
+### CustomKeys
+
+`CustomKeys` *extends* `string` = `never`

@@ -4,9 +4,9 @@
 
 [@hanseltime/compose-types](../../../../README.md) / [v3](../README.md) / Volume
 
-# Type Alias: Volume
+# Type Alias: Volume\<CustomKeys\>
 
-> **Volume** = `object` & [`Volume1`](Volume1.md)
+> **Volume**\<`CustomKeys`\> = `object` & [`XPrefixedKeys`](XPrefixedKeys.md)\<`CustomKeys`\> & [`Volume1`](Volume1.md)\<`CustomKeys`\>
 
 This interface was referenced by `undefined`'s JSON-Schema definition
 via the `patternProperty` "^[a-zA-Z0-9._-]+$".
@@ -50,3 +50,9 @@ The driver used for this volume
 ### name?
 
 > `optional` **name**: `string`
+
+## Type Parameters
+
+### CustomKeys
+
+`CustomKeys` *extends* `string` = `never`
